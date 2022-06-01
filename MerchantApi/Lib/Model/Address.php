@@ -338,7 +338,7 @@ class Address implements ArrayAccess
      */
     public function setState($state)
     {
-        if ((strlen($state) > 50)) {
+        if ($state && (strlen($state) > 50)) {
             throw new \InvalidArgumentException('Invalid length for $state when calling Address, '
             . 'must be smaller than or equal to 50.');
         }
